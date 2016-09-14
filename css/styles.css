@@ -1,0 +1,112 @@
+body{
+            margin:0;
+            padding:60px 0 0 0;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+        #header{
+            background-color: #cc0000;
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 2rem;
+        }
+        #porcentaje{
+            position: fixed;    
+            top: 10px;
+            left: 15px;
+        }
+        #scrolltotop{
+            position: fixed;
+            top:10px;
+            right: 15px;
+        }
+        .content{
+            margin: 1rem auto;
+            width: 90%;
+            max-width: 1024px;
+            height: auto;
+            background-color: #fefefe;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+        .main{
+            float: left;
+            background: #efefef;
+            width: calc(100% - 380px); /* 300px sidebar 40px space 40px paddingleft&right main content */
+            padding: 0 20px;
+        }
+        .side{   
+            float: left;
+            width: 300px;
+            margin-left: 40px;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            
+        }
+        #footer{
+            background-color: lightgray;
+            height: auto;
+            width: 100%;
+            position: relative;
+            display: block;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .side ul{
+            padding: 0;
+            margin: 0;
+            background-color: #efefef;
+        }
+        .side li {
+            width: 90%;
+            margin: 0 5%;
+            padding: 20px 0 0 0;
+            display: block;
+            list-style: none;
+        }
+        .side li:last-child{
+            padding-bottom: 20px;
+        }
+        .side img {
+            width: 100%;
+            height: auto;
+            background-color: red;
+        }
+        .side span{
+            font-size: 1rem;
+            line-height: 1.2em;
+        }
+        p{
+            text-align: justify;
+        }
+
+        .main img{
+            width: 100%;
+            height: auto;
+        }
+        .ads1{
+            width: 300px;
+            height: 600px;
+            line-height: 600px;
+            background: black;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .ads2{
+            margin-top: 20px;
+            width: 300px;
+            height: 250px;
+            line-height: 250px;
+            background: black;
+            color: white;
+            text-align: center;
+        }
