@@ -141,6 +141,10 @@
 
     <script>
         $(function(){  
+
+            console.log("aa");
+
+
             var $window = $(window),
                 $mainContent = $('[data-js-main-content]'),
                 $sideBar = $('[data-js-sidebar]'),
@@ -152,11 +156,13 @@
             $(window).bind('scroll', function() { moveSideBar(); });
 
             function moveSideBar() {
-                if($window.width()>=1024){
-                    var m = $mainContent.height(),
-                        s = $sideBar.height(),
+
+                var m = $mainContent.height(),
+                    v = $window.height();
+
+                if($window.width()>=1024 && ((m-v)>0)){
+                    var s = $sideBar.height(),
                         c = $wrapper.height(),
-                        v = $window.height(),
                         yScroll = $window.scrollTop(),
                         mtotop = $mainContent.offset().top,
                         endM = m-v+mtotop,
@@ -168,11 +174,9 @@
 
                     $wrapper.css({'overflow-y':'hidden', 'position':'relative'});
                     $sideBar.css({'overflow-y':'hidden', 'position':'absolute', 'top': porcentajeB, 'right':'0'});
-                
+                    
                     $('#porcentaje').html(Math.round(porcentajeA)+"%");
                     $('#scrolltotop').html(yScroll+"px");
-
-
                 }
                 else{
                     $sideBar.css({'position':'static'});
